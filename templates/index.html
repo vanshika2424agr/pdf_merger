@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>PdfX - Merge PDFs</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+
+*{
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-family:Segoe UI, Arial, sans-serif;
+    background:linear-gradient(135deg,#667eea,#764ba2);
+}
+
+.card{
+    background:white;
+    width:400px;
+    padding:40px 30px;
+    border-radius:18px;
+    text-align:center;
+   box-shadow:0 15px 35px rgba(0,0,0,0.25);
+}
+
+.card h1{
+    margin-bottom:10px;
+}
+
+.subtitle{
+    color:#666;
+   margin-bottom:30px;
+    font-size:16px;
+}
+
+.upload-box{
+    display:block;
+    border:2px dashed #764ba2;
+    padding:20px;
+    border-radius:12px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.upload-box:hover{
+  background:#f4f0ff;
+}
+
+.upload-box input{
+    display:none;
+}
+
+button{
+    width:100%;
+    padding:14px;
+    border:none;
+    border-radius:30px;
+    background:#764ba2;
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+button:hover{
+background:#5a3790;
+}
+
+</style>
+
+</head>
+<body>
+<div class="card">
+<h1>PdfX</h1>
+<div class="subtitle">
+Merge your PDF files easily
+</div>
+<form method="POST" action="/merge" enctype="multipart/form-data">
+
+<label class="upload-box">
+Click here to select PDF files
+<input type="file" name="pdfs" multiple required>
+</label>
+
+<button type="submit">
+Merge PDFs
+</button>
+</form>
+</div>
+</body>
+</html>
